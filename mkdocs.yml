@@ -1,0 +1,37 @@
+site_name: 日常笔记
+repo_url: https://github.com/ruiqiangJiao/daily-note.git
+repo_name: GitHub
+theme:
+    name: mkdocs
+    highlightjs: true
+    hljs_languages:
+        - python
+        - R
+        - sql
+markdown_extensions:
+    - toc:
+        permalink: 
+    - admonition
+    - def_list
+    - mdx_math
+extra_javascript:
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML
+plugins:
+    - search:
+        lang: en
+extra_css:
+    - css/extra.css
+nav:
+- 首页: index.md
+- 关于: about.md
+- 编程:
+    - 'python': program/python.md
+    - 'R': program/R.md
+    - 'git': program/git.md
+    - 'spark': program/spark.md
+    - 'linux': program/linux.md
+    - 'software': program/software.md
+- 算法:
+    - '线性回归': algorithm/linear-regression.md
+
+
