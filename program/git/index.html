@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>git - 日常笔记</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="../../css/extra.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/R.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">日常笔记</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">首页</a>
+                            </li>
+                            <li >
+                                <a href="../../about/">关于</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">编程 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../python/">python</a>
+</li>
+                                    
+<li >
+    <a href="../R/">R</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">git</a>
+</li>
+                                    
+<li >
+    <a href="../spark/">spark</a>
+</li>
+                                    
+<li >
+    <a href="../linux/">linux</a>
+</li>
+                                    
+<li >
+    <a href="../software/">software</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">算法 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../algorithm/linear-regression/">线性回归</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../R/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../spark/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/ruiqiangJiao/daily-note.git/edit/master/docs/program/git.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#_1">版本控制</a></li>
+            <li><a href="#github">github</a></li>
+            <li><a href="#gitlab">gitlab</a></li>
+            <li><a href="#bitbucket">bitbucket</a></li>
+            <li><a href="#_2">工具</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="_1">版本控制<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
+<hr />
+<h2 id="github">github<a class="headerlink" href="#github" title="Permanent link"></a></h2>
+<ul>
+<li>
+<p>创建库</p>
+</li>
+<li>
+<p>撤销文件</p>
+<ul>
+<li>
+<p>git reset</p>
+<p><code>git reset --hard    head~1
+git reset (--mixed) head~1
+git reset --soft    head~1</code>
+    - git checkout</p>
+</li>
+<li>
+<p>git checkout 和 git reset 的区别。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>恢复文件</p>
+</li>
+</ul>
+<pre><code>git reset --hard(mixed、soft) id
+</code></pre>
+
+<ul>
+<li>删除文件</li>
+</ul>
+<pre><code>git rm file
+</code></pre>
+
+<ul>
+<li>比较文件</li>
+</ul>
+<pre><code>git diff file                 工作区和缓存区进行比较
+git diff HEAD file            工作区和最近一次提交的进行比较
+git diff --stage(cached) file 缓存区和最近一次提交的进行比较
+git diff branchName filepath  当前分支的文件与branchName 分支的文件进行比较
+</code></pre>
+
+<ul>
+<li>添加远程或者推送远程</li>
+</ul>
+<pre><code>git fetch
+git merge
+git pull
+</code></pre>
+
+<ul>
+<li>
+<p>添加分支</p>
+<ul>
+<li>
+<p>master： 主分支，用于版本发布；</p>
+</li>
+<li>
+<p>develop： 日常开发分支，保存最新开发代码；</p>
+</li>
+<li>
+<p>feature： 功能开发，只与develop分支进行交互；</p>
+</li>
+<li>
+<p>release： master分支的为测试版本；</p>
+</li>
+<li>
+<p>hotfix： 线上修复bug分支。</p>
+</li>
+</ul>
+<p><code>git branch
+git checkout 
+git branch -b</code></p>
+</li>
+<li>
+<p>合并</p>
+</li>
+<li>
+<p>分支重演</p>
+</li>
+</ul>
+<pre><code>git rebase
+</code></pre>
+
+<ul>
+<li>
+<p>贮存管理</p>
+</li>
+<li>
+<p>标签管理</p>
+</li>
+</ul>
+<h2 id="gitlab">gitlab<a class="headerlink" href="#gitlab" title="Permanent link"></a></h2>
+<h2 id="bitbucket">bitbucket<a class="headerlink" href="#bitbucket" title="Permanent link"></a></h2>
+<h2 id="_2">工具<a class="headerlink" href="#_2" title="Permanent link"></a></h2>
+<h3 id="sourcetree">SourceTree<a class="headerlink" href="#sourcetree" title="Permanent link"></a></h3>
+<ul>
+<li>跳过注册码</li>
+</ul>
+<p>在我的电脑地址栏输入</p>
+<pre><code>%LocalAppData%\Atlassian\SourceTree\
+</code></pre>
+
+<p>于是打开 SourceTree 的文件夹,新建 accounts.json 该文件的内容如下:</p>
+<pre><code>[
+  {
+    &quot;$id&quot;: &quot;1&quot;,
+    &quot;$type&quot;: &quot;SourceTree.Api.Host.Identity.Model.IdentityAccount, SourceTree.Api.Host.Identity&quot;,
+    &quot;Authenticate&quot;: true,
+    &quot;HostInstance&quot;: {
+      &quot;$id&quot;: &quot;2&quot;,
+      &quot;$type&quot;: &quot;SourceTree.Host.Atlassianaccount.AtlassianAccountInstance, SourceTree.Host.AtlassianAccount&quot;,
+      &quot;Host&quot;: {
+        &quot;$id&quot;: &quot;3&quot;,
+        &quot;$type&quot;: &quot;SourceTree.Host.Atlassianaccount.AtlassianAccountHost, SourceTree.Host.AtlassianAccount&quot;,
+        &quot;Id&quot;: &quot;atlassian account&quot;
+      },
+      &quot;BaseUrl&quot;: &quot;https://id.atlassian.com/&quot;
+    },
+    &quot;Credentials&quot;: {
+      &quot;$id&quot;: &quot;4&quot;,
+      &quot;$type&quot;: &quot;SourceTree.Model.BasicAuthCredentials, SourceTree.Api.Account&quot;,
+      &quot;Username&quot;: &quot;&quot;,
+      &quot;Email&quot;: null
+    },
+    &quot;IsDefault&quot;: false
+  }
+]
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
