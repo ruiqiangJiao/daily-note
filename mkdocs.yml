@@ -1,6 +1,7 @@
 site_name: 日常笔记
 repo_url: https://github.com/ruiqiangJiao/daily-note.git
 repo_name: GitHub
+edit_uri: https://github.com/ruiqiangJiao/daily-note.git/master/docs/
 theme:
     name: mkdocs
     highlightjs: true
