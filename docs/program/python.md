@@ -119,3 +119,45 @@ pattern = r'^h'
 print re.findall(pattern , 'hello world') 
 ```
 
+## 分组排序
+
+```python
+df = pd.DataFrame({'Sp':['a','b','c','d','e','f'], 'Mt':['s1', 's1', 's2','s2','s2','s3'], 'Value':[1,2,3,4,5,6], 'Count':[3,2,5,10,10,6]})
+df
+```
+
+|    | Sp | Mt | Value | Count |
+|----|----|----|-------|-------|
+|0   | a  | s1 | 1     | 3     |
+|1   | b  | s1 | 2     | 2     |
+|2   | c  | s2 | 3     | 5     |
+|3   | d  | s2 | 4     | 10    |
+|4   | e  | s2 | 5     | 10    |
+|5   | f  | s3 | 6     | 6     |
+
+```python
+df.sort_values('Count', ascending=False).groupby('Mt', as_index=False).first()
+```
+
+|    | Mt | Sp | Value | Count |
+|----|----|----|-------|-------|
+|0   | s1 | a  | 1     | 3     |
+|1   | s2 | d  | 4     | 10    |
+|2   | s3 | f  | 6     | 6     |
+
+## 同一个组进行合并
+
+```python
+series = df.groupby(by='Mt',as_index=True).apply(lambda p:[','.join(p['Sp'])])
+df_result = pd.DataFrame({'Mt':series.index, 'Sp': series.values})
+df_result
+```
+
+|    | Mt | Sp       |
+|----|----|----------|
+|0   | s1 | [a, b]   |
+|1   | s2 | [c, d, e]|
+|2   | s3 | [f]      |
+
+
+
