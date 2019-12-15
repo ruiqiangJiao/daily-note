@@ -131,6 +131,8 @@
             <li><a href="#_1">时间处理</a></li>
             <li><a href="#_2">面向对象</a></li>
             <li><a href="#_4">正则表达式</a></li>
+            <li><a href="#_5">分组排序</a></li>
+            <li><a href="#_6">同一个组进行合并</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -245,7 +247,137 @@ pattern = r'[0-9]'
 print re.findall(pattern , '您好, jony is culcating 1+1') 
 pattern = r'^h'
 print re.findall(pattern , 'hello world') 
-</code></pre></div>
+</code></pre>
+
+<h2 id="_5">分组排序<a class="headerlink" href="#_5" title="Permanent link"></a></h2>
+<pre><code class="python">df = pd.DataFrame({'Sp':['a','b','c','d','e','f'], 'Mt':['s1', 's1', 's2','s2','s2','s3'], 'Value':[1,2,3,4,5,6], 'Count':[3,2,5,10,10,6]})
+df
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Sp</th>
+<th>Mt</th>
+<th>Value</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>a</td>
+<td>s1</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>b</td>
+<td>s1</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>c</td>
+<td>s2</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>d</td>
+<td>s2</td>
+<td>4</td>
+<td>10</td>
+</tr>
+<tr>
+<td>4</td>
+<td>e</td>
+<td>s2</td>
+<td>5</td>
+<td>10</td>
+</tr>
+<tr>
+<td>5</td>
+<td>f</td>
+<td>s3</td>
+<td>6</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="python">df.sort_values('Count', ascending=False).groupby('Mt', as_index=False).first()
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Mt</th>
+<th>Sp</th>
+<th>Value</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>s1</td>
+<td>a</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>s2</td>
+<td>d</td>
+<td>4</td>
+<td>10</td>
+</tr>
+<tr>
+<td>2</td>
+<td>s3</td>
+<td>f</td>
+<td>6</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_6">同一个组进行合并<a class="headerlink" href="#_6" title="Permanent link"></a></h2>
+<pre><code class="python">series = df.groupby(by='Mt',as_index=True).apply(lambda p:[','.join(p['Sp'])])
+df_result = pd.DataFrame({'Mt':series.index, 'Sp': series.values})
+df_result
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Mt</th>
+<th>Sp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>s1</td>
+<td>[a, b]</td>
+</tr>
+<tr>
+<td>1</td>
+<td>s2</td>
+<td>[c, d, e]</td>
+</tr>
+<tr>
+<td>2</td>
+<td>s3</td>
+<td>[f]</td>
+</tr>
+</tbody>
+</table></div>
         </div>
 
         <footer class="col-md-12">
