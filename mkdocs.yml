@@ -35,5 +35,6 @@ nav:
     - 'software': program/software.md
 - 算法:
     - '线性回归': algorithm/linear-regression.md
+    - '孤立森林': algorithm/iforest.md
 
 
