@@ -38,5 +38,7 @@ nav:
     - '线性回归': algorithm/linear-regression.md
     - '孤立森林': algorithm/iforest.md
     - 'S-H-ESD': algorithm/s-h-esd.md
+    - '相关资源': algorithm/related-material.md
+  
 
 
