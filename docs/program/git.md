@@ -15,7 +15,7 @@
         git reset --soft    head~1
         ```
     - git checkout
-        
+      
     - git checkout 和 git reset 的区别。
     
 - 恢复文件
@@ -49,13 +49,13 @@ git pull
 - 添加分支
 
     - master： 主分支，用于版本发布；
-  
+    
     - develop： 日常开发分支，保存最新开发代码；
-  
+    
     - feature： 功能开发，只与develop分支进行交互；
-  
+    
     - release： master分支的为测试版本；
-  
+    
     - hotfix： 线上修复bug分支。
 
     ```
@@ -121,3 +121,7 @@ git rebase
   }
 ]
 ```
+
+### 参考资料
+
+[精通Git(第二版简体中文)](https://github.com/GruSir/vuetest/blob/master/%E7%B2%BE%E9%80%9AGit(%E7%AC%AC%E4%BA%8C%E7%89%88%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87).pdf)

@@ -62,62 +62,7 @@ print(time.localtime(time.time()))
 
 + %W 一年中的星期数（00~53），星期一位星期的开始.
 
-
-## 面向对象
-
-### 面向对象基本概念
-
-(1) 继承
-
-(2) 多态
-
-(3) 封装
-
-(4) 构造函数
-
-当创建类的对象实例时系统会自动调用构造函数，通过构造函数对类进行初始化操作。
-
-(5) 析构函数
-
-释放类占用的资源。
-
-
-(6) 静态成员
-
-静态变量和静态方法与类具体的对象没有关系，而只属于他们定义的类。在静态方法无法访问实例变量，不可以直接访问类的静态变量，但可以通过类名引用静态变量。
-
-```{python}
-class UserInfo:
-  def __init__(self , name , pwd):
-    self.username = name
-    self._pwd = pwd
-    
-  def output(self):
-    print("username" ,  self.username) 
-    
-  def __del__(self):
-    print("byebye~")
-    
-u = UserInfo("admin" , "123456")
-u.output()
-del u
-```
-
 ## 正则表达式
-
-- []: 匹配方括号中任意一个内容
-
-- ^ : 匹配以某个内容开头的模式
-
-- $ : 匹配以某个内容开头的模式
-
-```{python}
-import re
-pattern = r'[0-9]'
-print re.findall(pattern , '您好, jony is culcating 1+1') 
-pattern = r'^h'
-print re.findall(pattern , 'hello world') 
-```
 
 ## 分组排序
 
@@ -165,3 +110,13 @@ df_result
 [pandarallel](https://github.com/nalepae/pandarallel)
 
 [paratext](https://github.com/wiseio/paratext)
+
+[xgboost](https://xgboost.readthedocs.io/en/latest/python/python_api.html)
+
+##  参考资料
+
+[Python数据分析](https://seancheney.gitbook.io/python-for-data-analysis-2nd/di-10-zhang-shu-ju-ju-he-yu-fen-zu-yun-suan)
+
+[颜色色卡](https://www.colorhexa.com/)
+
+[Matplotlib可视化最有价值的 50 个图表](http://liyangbit.com/pythonvisualization/matplotlib-top-50-visualizations/#)
