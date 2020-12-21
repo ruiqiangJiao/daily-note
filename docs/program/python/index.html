@@ -138,23 +138,23 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">面向对象</a>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">正则表达式</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">正则表达式</a>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">分组排序</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">分组排序</a>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">同一个组进行合并</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">同一个组进行合并</a>
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">常用包说明文档</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#pandarallel" class="nav-link">pandarallel</a>
+            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">参考资料</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -231,53 +231,8 @@ print(time.localtime(time.time()))
 <p>%W 一年中的星期数（00~53），星期一位星期的开始.</p>
 </li>
 </ul>
-<h2 id="_2">面向对象<a class="headerlink" href="#_2" title="Permanent link"></a></h2>
-<h3 id="_3">面向对象基本概念<a class="headerlink" href="#_3" title="Permanent link"></a></h3>
-<p>(1) 继承</p>
-<p>(2) 多态</p>
-<p>(3) 封装</p>
-<p>(4) 构造函数</p>
-<p>当创建类的对象实例时系统会自动调用构造函数，通过构造函数对类进行初始化操作。</p>
-<p>(5) 析构函数</p>
-<p>释放类占用的资源。</p>
-<p>(6) 静态成员</p>
-<p>静态变量和静态方法与类具体的对象没有关系，而只属于他们定义的类。在静态方法无法访问实例变量，不可以直接访问类的静态变量，但可以通过类名引用静态变量。</p>
-<pre><code class="python">class UserInfo:
-  def __init__(self , name , pwd):
-    self.username = name
-    self._pwd = pwd
-
-  def output(self):
-    print(&quot;username&quot; ,  self.username) 
-
-  def __del__(self):
-    print(&quot;byebye~&quot;)
-
-u = UserInfo(&quot;admin&quot; , &quot;123456&quot;)
-u.output()
-del u
-</code></pre>
-
-<h2 id="_4">正则表达式<a class="headerlink" href="#_4" title="Permanent link"></a></h2>
-<ul>
-<li>
-<p>[]: 匹配方括号中任意一个内容</p>
-</li>
-<li>
-<p>^ : 匹配以某个内容开头的模式</p>
-</li>
-<li>
-<p>$ : 匹配以某个内容开头的模式</p>
-</li>
-</ul>
-<pre><code class="python">import re
-pattern = r'[0-9]'
-print re.findall(pattern , '您好, jony is culcating 1+1') 
-pattern = r'^h'
-print re.findall(pattern , 'hello world') 
-</code></pre>
-
-<h2 id="_5">分组排序<a class="headerlink" href="#_5" title="Permanent link"></a></h2>
+<h2 id="_2">正则表达式<a class="headerlink" href="#_2" title="Permanent link"></a></h2>
+<h2 id="_3">分组排序<a class="headerlink" href="#_3" title="Permanent link"></a></h2>
 <pre><code class="python">df = pd.DataFrame({'Sp':['a','b','c','d','e','f'], 'Mt':['s1', 's1', 's2','s2','s2','s3'], 'Value':[1,2,3,4,5,6], 'Count':[3,2,5,10,10,6]})
 df
 </code></pre>
@@ -374,7 +329,7 @@ df
 </tr>
 </tbody>
 </table>
-<h2 id="_6">同一个组进行合并<a class="headerlink" href="#_6" title="Permanent link"></a></h2>
+<h2 id="_4">同一个组进行合并<a class="headerlink" href="#_4" title="Permanent link"></a></h2>
 <pre><code class="python">series = df.groupby(by='Mt',as_index=True).apply(lambda p:[','.join(p['Sp'])])
 df_result = pd.DataFrame({'Mt':series.index, 'Sp': series.values})
 df_result
@@ -406,8 +361,14 @@ df_result
 </tr>
 </tbody>
 </table>
-<h2 id="pandarallel">pandarallel<a class="headerlink" href="#pandarallel" title="Permanent link"></a></h2>
-<p><a href="https://github.com/nalepae/pandarallel">pandarallel</a></p></div>
+<h2 id="_5">常用包说明文档<a class="headerlink" href="#_5" title="Permanent link"></a></h2>
+<p><a href="https://github.com/nalepae/pandarallel">pandarallel</a></p>
+<p><a href="https://github.com/wiseio/paratext">paratext</a></p>
+<p><a href="https://xgboost.readthedocs.io/en/latest/python/python_api.html">xgboost</a></p>
+<h2 id="_6">参考资料<a class="headerlink" href="#_6" title="Permanent link"></a></h2>
+<p><a href="https://seancheney.gitbook.io/python-for-data-analysis-2nd/di-10-zhang-shu-ju-ju-he-yu-fen-zu-yun-suan">Python数据分析</a></p>
+<p><a href="https://www.colorhexa.com/">颜色色卡</a></p>
+<p><a href="http://liyangbit.com/pythonvisualization/matplotlib-top-50-visualizations/#">Matplotlib可视化最有价值的 50 个图表</a></p></div>
             </div>
         </div>
 
