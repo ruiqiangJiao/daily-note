@@ -160,4 +160,6 @@ df_result
 |2   | s3 | [f]      |
 
 
+## pandarallel
 
+[pandarallel](https://github.com/nalepae/pandarallel)
