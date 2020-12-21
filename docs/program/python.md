@@ -160,6 +160,8 @@ df_result
 |2   | s3 | [f]      |
 
 
-## pandarallel
+## 常用包说明文档
 
 [pandarallel](https://github.com/nalepae/pandarallel)
+
+[paratext](https://github.com/wiseio/paratext)
