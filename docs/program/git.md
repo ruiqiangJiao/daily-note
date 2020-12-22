@@ -125,3 +125,5 @@ git rebase
 ### 参考资料
 
 [精通Git(第二版简体中文)](https://github.com/GruSir/vuetest/blob/master/%E7%B2%BE%E9%80%9AGit(%E7%AC%AC%E4%BA%8C%E7%89%88%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87).pdf)
+
+[Github Docs](https://docs.github.com/cn/free-pro-team@latest/github)
