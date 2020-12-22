@@ -1,6 +1,10 @@
 # 常用软件安装
 ---
 
+**Markdown**
+
+[Learning-Markdown](http://xianbai.me/learn-md/)
+
 ## **pycharm** 安装
 
 1.安装 python2.7.13，完成后命令行使用 python 查看
@@ -57,3 +61,4 @@
   }
 ]
 ```
+
