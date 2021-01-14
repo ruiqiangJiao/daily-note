@@ -11,3 +11,8 @@
 
 2. 加载 **rsconnect** 包，并应用其中的函数 **deployApp** 进行发布.
 
+
+## 画图参考资料
+
+[The R Graph Gallery](https://www.r-graph-gallery.com/)
+
