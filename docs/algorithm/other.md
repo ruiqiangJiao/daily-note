@@ -14,9 +14,11 @@
 
 ## Latex
 
-[参考资料一](https://www.overleaf.com/learn/latex/Chinese)
+- [参考资料一](https://www.overleaf.com/learn/latex/Chinese)
 
 - [slam](https://github.com/liulinbo/slam)
+
+-[CSBook](https://github.com/Jonezhen/CSBook)
 
 
 
