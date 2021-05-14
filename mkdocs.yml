@@ -32,6 +32,7 @@ nav:
     - 'R': program/R.md
     - 'git': program/git.md
     - 'spark': program/spark.md
+    - 'SQL': program/SQL.md
     - 'linux': program/linux.md
     - 'software': program/software.md
 - 算法:

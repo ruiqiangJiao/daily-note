@@ -65,3 +65,5 @@
 ## 参考资料
 
 [SnailTyan](http://noahsnail.com/)
+
+[Windows平台下单机Spark环境搭建](https://yxnchen.github.io/technique/Windows%E5%B9%B3%E5%8F%B0%E4%B8%8B%E5%8D%95%E6%9C%BASpark%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/)
