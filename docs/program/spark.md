@@ -144,3 +144,14 @@ executor进程分配到的核数,单个executor能并发执行task数
 - --conf spark.kryoserializer.buffer.max 用来设置对象序列化占用空间大小(=2000m)
 
 - --conf spark.driver.maxResultSize:表所有分区的序列化运行总的内存限制 ,控制worker送回driver的数据大小，一旦操过该限制，driver会终止执行(=10g) 
+
+
+参考资料
+
+[Learning Spark](https://waltyou.github.io/Learning-Spark-0/)
+
+[jar 包](https://mvnrepository.com/)
+
+
+
+
