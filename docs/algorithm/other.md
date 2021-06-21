@@ -18,7 +18,9 @@
 
 - [slam](https://github.com/liulinbo/slam)
 
--[CSBook](https://github.com/Jonezhen/CSBook)
+- [CSBook](https://github.com/Jonezhen/CSBook)
+
+- [参考资料](https://github.com/foochane?tab=repositories)
 
 
 
